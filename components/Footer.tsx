@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             &copy; {currentYear} Apex Cloud Consulting GmbH. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-gray-500">

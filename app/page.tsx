@@ -155,7 +155,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to accelerate your cloud journey?
           </h2>
-          <p className="text-blue-100 text-lg mb-8">
+          <p className="text-white text-lg mb-8">
             Our consultants are ready to discuss your specific challenges. No sales pitch — just honest advice.
           </p>
           <Link
