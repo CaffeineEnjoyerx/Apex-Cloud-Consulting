@@ -76,7 +76,7 @@ export default function Footer() {
           <div className="flex gap-6 text-xs text-gray-500">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Imprint</a>
+            <Link href="/imprint" className="hover:text-gray-300 transition-colors">Imprint</Link>
           </div>
         </div>
       </div>
