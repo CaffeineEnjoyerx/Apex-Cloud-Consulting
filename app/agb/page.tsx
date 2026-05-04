@@ -29,8 +29,8 @@ export default function AgbPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">§ 1 Geltungsbereich</h2>
             <p className="leading-relaxed">
               Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der
-              Apex Cloud Consulting GmbH (nachfolgend „Auftragnehmer") und ihren Auftraggebern
-              (nachfolgend „Auftraggeber") über Beratungs-, Entwicklungs- und sonstige IT-Dienstleistungen.
+              Apex Cloud Consulting GmbH (nachfolgend &bdquo;Auftragnehmer&ldquo;) und ihren Auftraggebern
+              (nachfolgend &bdquo;Auftraggeber&ldquo;) über Beratungs-, Entwicklungs- und sonstige IT-Dienstleistungen.
               Abweichende Bedingungen des Auftraggebers werden nicht anerkannt, es sei denn, der
               Auftragnehmer stimmt ihrer Geltung ausdrücklich schriftlich zu.
             </p>
