@@ -2,15 +2,22 @@ import Link from "next/link";
 
 const footerLinks = {
   Services: [
-    { label: "Cloud Migration", href: "/services" },
-    { label: "Connected Car Platforms", href: "/services" },
-    { label: "OEM Solutions", href: "/services" },
-    { label: "DevOps & CI/CD", href: "/services" },
+    { label: "Cloud Migration", href: "/services/cloud-migration" },
+    { label: "Connected Car Platforms", href: "/services/connected-car" },
+    { label: "SAP on Cloud", href: "/services/sap-on-cloud" },
+    { label: "DevOps & CI/CD", href: "/services/devops-cicd" },
+    { label: "Data & Analytics", href: "/services/data-analytics" },
+    { label: "Security & Compliance", href: "/services/security-compliance" },
+  ],
+  Industries: [
+    { label: "OEM Solutions", href: "/industries/oem" },
+    { label: "Tier-1 Suppliers", href: "/industries/tier-1" },
+    { label: "Mobility Startups", href: "/industries/mobility-startups" },
   ],
   Company: [
     { label: "About Us", href: "/about" },
-    { label: "Our Team", href: "/about" },
-    { label: "Careers", href: "/about" },
+    { label: "Our Team", href: "/team" },
+    { label: "Blog & Insights", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
 };
@@ -21,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">

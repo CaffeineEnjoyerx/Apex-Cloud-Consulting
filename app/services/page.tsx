@@ -114,7 +114,7 @@ export default function ServicesPage() {
                     </span>
                     <h2 className="text-xl font-bold text-gray-900 mt-1 mb-3">{service.title}</h2>
                     <p className="text-gray-600 leading-relaxed mb-5">{service.description}</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-5">
                       {service.benefits.map((benefit) => (
                         <li key={benefit} className="flex items-start gap-2 text-sm text-gray-700">
                           <svg
@@ -132,6 +132,15 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+                    <Link
+                      href={`/services/${service.id}`}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                      Learn more
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </article>
