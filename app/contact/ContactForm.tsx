@@ -1,17 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import type { contactPageCopy } from "@/content/contact";
-
-type Fields = typeof contactPageCopy.form.fields;
+type Fields = {
+  name: { label: string; placeholder: string };
+  company: { label: string; placeholder: string };
+  role: { label: string; placeholder: string };
+  email: { label: string; placeholder: string };
+  phone: { label: string; placeholder: string };
+  topic: { label: string; placeholder: string; options: readonly string[] };
+  message: { label: string; placeholder: string };
+};
 
 interface Props {
   fields: Fields;
   submitLabel: string;
   privacyNote: string;
+  successTitle?: string;
+  successMessage?: string;
+  loadingLabel?: string;
 }
 
-export default function ContactForm({ fields, submitLabel, privacyNote }: Props) {
+export default function ContactForm({
+  fields,
+  submitLabel,
+  privacyNote,
+  successTitle = "Message Sent!",
+  successMessage = "Thank you for reaching out. One of our senior consultants will be in touch within one business day.",
+  loadingLabel = "Sending…",
+}: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -33,10 +49,8 @@ export default function ContactForm({ fields, submitLabel, privacyNote }: Props)
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-        <p className="text-gray-600 max-w-sm">
-          Thank you for reaching out. One of our senior consultants will be in touch within one business day.
-        </p>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{successTitle}</h3>
+        <p className="text-gray-600 max-w-sm">{successMessage}</p>
       </div>
     );
   }
@@ -167,7 +181,7 @@ export default function ContactForm({ fields, submitLabel, privacyNote }: Props)
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              Sending…
+              {loadingLabel}
             </>
           ) : (
             submitLabel

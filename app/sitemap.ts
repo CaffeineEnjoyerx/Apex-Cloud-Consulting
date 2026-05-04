@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/impressum`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.1 },
     { url: `${baseUrl}/datenschutz`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.1 },
     { url: `${baseUrl}/agb`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.1 },
+    // German (de) translations
+    { url: `${baseUrl}/de`, lastModified: new Date(), changeFrequency: "monthly", priority: 1.0 },
+    { url: `${baseUrl}/de/services`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/de/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/de/team`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/de/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = serviceDetails.map((s) => ({

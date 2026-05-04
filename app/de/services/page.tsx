@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { servicesPageCopy } from "@/content/services";
+import { servicesPageCopyDe } from "@/content/de/services";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
@@ -9,16 +9,16 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
-    { "@type": "ListItem", position: 2, name: "Services", item: `${siteUrl}/services` },
+    { "@type": "ListItem", position: 1, name: "Startseite", item: `${siteUrl}/de` },
+    { "@type": "ListItem", position: 2, name: "Leistungen", item: `${siteUrl}/de/services` },
   ],
 };
 
 const servicesSchema = {
   "@context": "https://schema.org",
-  "@graph": servicesPageCopy.services.map((service) => ({
+  "@graph": servicesPageCopyDe.services.map((service) => ({
     "@type": "Service",
-    "@id": `${siteUrl}/services#${service.id}`,
+    "@id": `${siteUrl}/de/services#${service.id}`,
     name: service.title,
     description: service.description,
     provider: {
@@ -27,33 +27,35 @@ const servicesSchema = {
     },
     areaServed: ["DE", "EU", "US"],
     serviceType: service.title,
+    inLanguage: "de-DE",
   })),
 };
 
 export const metadata: Metadata = {
-  title: "Cloud Services for Automotive",
+  title: "Cloud-Leistungen für Automotive",
   description:
-    "Discover Apex Cloud Consulting's services: cloud migration, Connected Car platform development, OEM cloud solutions, and DevOps for the automotive industry.",
+    "Entdecken Sie die Leistungen von Apex Cloud Consulting: Cloud-Migration, Connected-Car-Plattformentwicklung, OEM-Cloud-Lösungen und DevOps für die Automobilindustrie.",
   keywords: [
     "cloud migration automotive",
-    "connected car platform",
-    "OEM cloud services",
-    "Tier-1 supplier DevOps",
-    "automotive cloud architecture",
+    "connected car plattform",
+    "OEM cloud leistungen",
+    "tier-1 zulieferer devops",
+    "automotive cloud architektur",
   ],
   alternates: {
-    canonical: "/services",
+    canonical: "/de/services",
     languages: {
       "en": "/services",
       "de": "/de/services",
     },
   },
   openGraph: {
-    title: "Cloud Services for Automotive – Apex Cloud Consulting",
+    title: "Cloud-Leistungen für Automotive – Apex Cloud Consulting",
     description:
-      "Cloud migration, Connected Car platforms, OEM solutions, and DevOps for the automotive industry.",
-    url: "/services",
+      "Cloud-Migration, Connected-Car-Plattformen, OEM-Lösungen und DevOps für die Automobilindustrie.",
+    url: "/de/services",
     type: "website",
+    locale: "de_DE",
   },
 };
 
@@ -71,7 +73,7 @@ const iconPaths: Record<string, string> = {
     "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
 };
 
-export default function ServicesPage() {
+export default function ServicesPageDe() {
   return (
     <>
       <script
@@ -86,8 +88,8 @@ export default function ServicesPage() {
       <section className="bg-gradient-to-br from-gray-900 to-blue-950 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">{servicesPageCopy.headline}</h1>
-            <p className="text-lg text-blue-100 leading-relaxed">{servicesPageCopy.subheadline}</p>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">{servicesPageCopyDe.headline}</h1>
+            <p className="text-lg text-blue-100 leading-relaxed">{servicesPageCopyDe.subheadline}</p>
           </div>
         </div>
       </section>
@@ -96,7 +98,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {servicesPageCopy.services.map((service) => (
+            {servicesPageCopyDe.services.map((service) => (
               <article
                 key={service.id}
                 className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
@@ -140,7 +142,7 @@ export default function ServicesPage() {
                       href={`/services/${service.id}`}
                       className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
                     >
-                      Learn more
+                      Mehr erfahren
                       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -157,16 +159,16 @@ export default function ServicesPage() {
       <section className="bg-blue-600 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            {servicesPageCopy.cta.label}
+            {servicesPageCopyDe.cta.label}
           </h2>
           <p className="text-white text-lg mb-8">
-            Tell us about your project. Our senior consultants will get back to you within one business day.
+            Schildern Sie uns Ihr Vorhaben. Unsere Senior-Berater melden sich innerhalb eines Werktags bei Ihnen.
           </p>
           <Link
-            href={servicesPageCopy.cta.href}
+            href={servicesPageCopyDe.cta.href}
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
           >
-            Get in Touch
+            Kontakt aufnehmen
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

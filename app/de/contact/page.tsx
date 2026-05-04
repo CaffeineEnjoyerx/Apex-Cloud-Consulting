@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import ContactForm from "./ContactForm";
-import { contactPageCopy } from "@/content/contact";
+import ContactForm from "@/app/contact/ContactForm";
+import { contactPageCopyDe } from "@/content/de/contact";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
@@ -9,37 +9,38 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
-    { "@type": "ListItem", position: 2, name: "Contact", item: `${siteUrl}/contact` },
+    { "@type": "ListItem", position: 1, name: "Startseite", item: `${siteUrl}/de` },
+    { "@type": "ListItem", position: 2, name: "Kontakt", item: `${siteUrl}/de/contact` },
   ],
 };
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Kontakt",
   description:
-    "Get in touch with Apex Cloud Consulting. Let's discuss how we can support your automotive cloud transformation journey.",
+    "Nehmen Sie Kontakt mit Apex Cloud Consulting auf. Lassen Sie uns besprechen, wie wir Ihre Automotive-Cloud-Transformation unterstützen können.",
   keywords: [
-    "contact apex cloud consulting",
-    "automotive cloud inquiry",
-    "cloud consulting contact",
+    "kontakt apex cloud consulting",
+    "automotive cloud anfrage",
+    "cloud consulting kontakt",
   ],
   alternates: {
-    canonical: "/contact",
+    canonical: "/de/contact",
     languages: {
       "en": "/contact",
       "de": "/de/contact",
     },
   },
   openGraph: {
-    title: "Contact Apex Cloud Consulting",
+    title: "Kontakt – Apex Cloud Consulting",
     description:
-      "Reach out to discuss your automotive cloud transformation needs.",
-    url: "/contact",
+      "Kontaktieren Sie uns für Ihre Automotive-Cloud-Transformation.",
+    url: "/de/contact",
     type: "website",
+    locale: "de_DE",
   },
 };
 
-export default function ContactPage() {
+export default function ContactPageDe() {
   return (
     <>
       <script
@@ -50,8 +51,8 @@ export default function ContactPage() {
       <section className="bg-gradient-to-br from-gray-900 to-blue-950 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">{contactPageCopy.headline}</h1>
-            <p className="text-lg text-blue-100 leading-relaxed">{contactPageCopy.subheadline}</p>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">{contactPageCopyDe.headline}</h1>
+            <p className="text-lg text-blue-100 leading-relaxed">{contactPageCopyDe.subheadline}</p>
           </div>
         </div>
       </section>
@@ -63,9 +64,16 @@ export default function ContactPage() {
             {/* Form — takes 3 columns */}
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">{contactPageCopy.form.title}</h2>
-                <p className="text-gray-600 mb-8">{contactPageCopy.form.description}</p>
-                <ContactForm fields={contactPageCopy.form.fields} submitLabel={contactPageCopy.form.submitLabel} privacyNote={contactPageCopy.form.privacyNote} />
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">{contactPageCopyDe.form.title}</h2>
+                <p className="text-gray-600 mb-8">{contactPageCopyDe.form.description}</p>
+                <ContactForm
+                  fields={contactPageCopyDe.form.fields}
+                  submitLabel={contactPageCopyDe.form.submitLabel}
+                  privacyNote={contactPageCopyDe.form.privacyNote}
+                  successTitle={contactPageCopyDe.form.successTitle}
+                  successMessage={contactPageCopyDe.form.successMessage}
+                  loadingLabel={contactPageCopyDe.form.loadingLabel}
+                />
               </div>
             </div>
 
@@ -73,9 +81,9 @@ export default function ContactPage() {
             <div className="lg:col-span-2 space-y-8">
               {/* Offices */}
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-6">{contactPageCopy.office.title}</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-6">{contactPageCopyDe.office.title}</h2>
                 <div className="space-y-6">
-                  {contactPageCopy.office.locations.map((loc) => (
+                  {contactPageCopyDe.office.locations.map((loc) => (
                     <div
                       key={loc.city}
                       className={`bg-white rounded-xl p-6 border ${loc.isPrimary ? "border-blue-200 shadow-sm" : "border-gray-100"}`}
@@ -109,9 +117,9 @@ export default function ContactPage() {
 
               {/* Social */}
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">{contactPageCopy.social.title}</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">{contactPageCopyDe.social.title}</h2>
                 <div className="flex flex-col gap-3">
-                  {contactPageCopy.social.links.map((link) => (
+                  {contactPageCopyDe.social.links.map((link) => (
                     <a
                       key={link.platform}
                       href={link.href}
