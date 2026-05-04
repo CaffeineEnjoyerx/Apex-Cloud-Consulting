@@ -74,9 +74,9 @@ export default function Footer() {
             &copy; {currentYear} Apex Cloud Consulting GmbH. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-gray-500">
-            <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
-            <Link href="/imprint" className="hover:text-gray-300 transition-colors">Imprint</Link>
+            <Link href="/datenschutz" className="hover:text-gray-300 transition-colors">Datenschutz</Link>
+            <Link href="/agb" className="hover:text-gray-300 transition-colors">AGB</Link>
+            <Link href="/impressum" className="hover:text-gray-300 transition-colors">Impressum</Link>
           </div>
         </div>
       </div>
