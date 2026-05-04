@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import StudentDisclaimer from "@/components/StudentDisclaimer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
@@ -77,41 +77,113 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
-  name: "Apex Cloud Consulting GmbH",
-  url: siteUrl,
-  logo: `${siteUrl}/logo.png`,
-  description:
-    "Apex Cloud Consulting specializes in cloud transformation, connected car platforms, and DevOps solutions for the automotive industry — serving OEMs, Tier-1 suppliers, and Connected Car platform providers.",
-  foundingDate: "2020",
-  areaServed: ["DE", "EU"],
-  serviceType: [
-    "Cloud Migration",
-    "Connected Car Platform Development",
-    "DevOps Consulting",
-    "Cloud Architecture",
-    "OEM Cloud Solutions",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": `${siteUrl}/#organization`,
+      name: "Apex Cloud Consulting GmbH",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/logo.png`,
+        width: 200,
+        height: 60,
+      },
+      description:
+        "Apex Cloud Consulting specializes in cloud transformation, connected car platforms, and DevOps solutions for the automotive industry — serving OEMs, Tier-1 suppliers, and Connected Car platform providers.",
+      foundingDate: "2020",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Leopoldstraße 180",
+        addressLocality: "München",
+        postalCode: "80804",
+        addressRegion: "Bavaria",
+        addressCountry: "DE",
+      },
+      telephone: "+49 89 2430 8800",
+      email: "munich@apexcloudconsulting.com",
+      areaServed: ["DE", "EU", "US"],
+      knowsAbout: [
+        "Cloud Computing",
+        "Automotive Industry",
+        "Connected Vehicles",
+        "OEM Software",
+        "DevOps",
+        "Microsoft Azure",
+        "Amazon Web Services",
+        "Kubernetes",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Cloud Consulting Services for Automotive",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Cloud Migration & Modernization",
+              description: "End-to-end cloud migration for automotive legacy on-premise environments.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "DevOps & CI/CD Transformation",
+              description: "DevOps culture embedding and CI/CD pipeline automation for automotive engineering teams.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Connected Car Platform Engineering",
+              description: "Backend services for connected vehicles — OTA updates, remote diagnostics, and vehicle data pipelines.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "SAP on Cloud",
+              description: "SAP S/4HANA migrations to hyperscaler platforms with zero business downtime.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Security & Compliance",
+              description: "TISAX readiness and UNECE WP.29 cybersecurity compliance for automotive cloud environments.",
+            },
+          },
+        ],
+      },
+      sameAs: [
+        "https://www.linkedin.com/company/apex-cloud-consulting",
+        "https://twitter.com/apexcloudconsult",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+49 89 2430 8800",
+        availableLanguage: ["English", "German"],
+        url: `${siteUrl}/contact`,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Apex Cloud Consulting",
+      description:
+        "Cloud transformation, connected car platforms, and DevOps solutions for the automotive industry.",
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+      inLanguage: "en-US",
+    },
   ],
-  knowsAbout: [
-    "Cloud Computing",
-    "Automotive Industry",
-    "Connected Vehicles",
-    "OEM Software",
-    "DevOps",
-    "Microsoft Azure",
-    "Amazon Web Services",
-    "Kubernetes",
-  ],
-  sameAs: [
-    "https://www.linkedin.com/company/apex-cloud-consulting",
-    "https://twitter.com/apexcloudconsult",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    availableLanguage: ["English", "German"],
-    url: `${siteUrl}/contact`,
-  },
 };
 
 export default function RootLayout({

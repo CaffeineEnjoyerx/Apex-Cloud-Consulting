@@ -2,6 +2,18 @@ import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
 import { contactPageCopy } from "@/content/contact";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+    { "@type": "ListItem", position: 2, name: "Contact", item: `${siteUrl}/contact` },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
@@ -26,6 +38,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <section className="bg-gradient-to-br from-gray-900 to-blue-950 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

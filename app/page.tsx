@@ -2,6 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { heroCopy } from "@/content/hero";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/#webpage`,
+  url: siteUrl,
+  name: "Apex Cloud Consulting – Cloud Solutions for Automotive",
+  description:
+    "Apex Cloud Consulting delivers cloud transformation, connected car platforms, and DevOps solutions for OEMs and Tier-1 automotive suppliers.",
+  isPartOf: { "@id": `${siteUrl}/#website` },
+  about: { "@id": `${siteUrl}/#organization` },
+  inLanguage: "en-US",
+};
+
 export const metadata: Metadata = {
   title: "Cloud Consulting for Automotive – Home",
   description:
@@ -21,6 +37,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white overflow-hidden">
         <div

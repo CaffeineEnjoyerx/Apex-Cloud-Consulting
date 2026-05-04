@@ -2,6 +2,34 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { servicesPageCopy } from "@/content/services";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${siteUrl}/services` },
+  ],
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": servicesPageCopy.services.map((service) => ({
+    "@type": "Service",
+    "@id": `${siteUrl}/services#${service.id}`,
+    name: service.title,
+    description: service.description,
+    provider: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+    },
+    areaServed: ["DE", "EU", "US"],
+    serviceType: service.title,
+  })),
+};
+
 export const metadata: Metadata = {
   title: "Cloud Services for Automotive",
   description:
@@ -42,6 +70,14 @@ const iconPaths: Record<string, string> = {
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       {/* Header */}
       <section className="bg-gradient-to-br from-gray-900 to-blue-950 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
