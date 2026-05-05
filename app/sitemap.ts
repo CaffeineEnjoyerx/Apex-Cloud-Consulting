@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { serviceDetails } from "@/content/serviceDetails";
 import { blogPosts } from "@/content/blog";
 import { industries } from "@/content/industries";
+import { caseStudies } from "@/content/caseStudies";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
@@ -14,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/team`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${baseUrl}/case-studies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/resources/tisax-cloud-checklist`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/impressum`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.1 },
     { url: `${baseUrl}/datenschutz`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.1 },
     { url: `${baseUrl}/agb`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.1 },
@@ -46,5 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...industryRoutes];
+  const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
+    url: `${baseUrl}/case-studies/${cs.slug}`,
+    lastModified: new Date(cs.updatedAt),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...industryRoutes, ...caseStudyRoutes];
 }

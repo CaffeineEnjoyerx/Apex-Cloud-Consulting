@@ -18,6 +18,7 @@ const footerLinks = {
     { label: "About Us", href: "/about" },
     { label: "Our Team", href: "/team" },
     { label: "Blog & Insights", href: "/blog" },
+    { label: "Glossary", href: "/glossary" },
     { label: "Contact", href: "/contact" },
   ],
 };
