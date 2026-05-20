@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import StudentDisclaimer from "@/components/StudentDisclaimer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -127,6 +128,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased bg-white text-gray-900`}>
+        <StudentDisclaimer />
         <Navigation />
         <main className="pt-16">{children}</main>
         <Footer />

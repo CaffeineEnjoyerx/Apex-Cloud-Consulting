@@ -77,6 +77,7 @@ export default function Footer() {
             <Link href="/datenschutz" className="hover:text-gray-300 transition-colors">Datenschutz</Link>
             <Link href="/agb" className="hover:text-gray-300 transition-colors">AGB</Link>
             <Link href="/impressum" className="hover:text-gray-300 transition-colors">Impressum</Link>
+            <Link href="/imprint" className="hover:text-gray-300 transition-colors">Imprint</Link>
           </div>
         </div>
       </div>
