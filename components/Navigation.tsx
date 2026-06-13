@@ -31,11 +31,11 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group shrink-0">
             <Image 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="Apex Cloud Consulting Logo" 
-              width={300} 
-              height={400} 
-              className="h-32 w-auto object-contain -my-10"
+              width={160} 
+              height={64} 
+              className="h-12 w-auto object-contain"
               priority
             />
           </Link>

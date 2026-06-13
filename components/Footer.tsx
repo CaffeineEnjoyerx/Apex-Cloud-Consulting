@@ -36,11 +36,11 @@ export default function Footer() {
             <Link href="/" className="flex items-center mb-4">
               <div className="bg-white/95 p-2 rounded-xl inline-block">
                 <Image 
-                  src="/logo.jpg" 
+                  src="/logo.png" 
                   alt="Apex Cloud Consulting Logo" 
-                  width={300} 
-                  height={400} 
-                  className="h-24 w-auto object-contain -my-6"
+                  width={160} 
+                  height={64} 
+                  className="h-14 w-auto object-contain"
                 />
               </div>
             </Link>
