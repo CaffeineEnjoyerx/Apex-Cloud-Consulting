@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -28,15 +29,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center group-hover:bg-blue-700 transition-colors">
-              <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-              </svg>
-            </div>
-            <span className="font-bold text-lg text-gray-900">
-              Apex<span className="text-blue-600">Cloud</span>
-            </span>
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
+            <Image 
+              src="/logo.png" 
+              alt="Apex Cloud Consulting Logo" 
+              width={120} 
+              height={48} 
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

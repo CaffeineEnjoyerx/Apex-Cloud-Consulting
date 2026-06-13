@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Services: [
@@ -32,15 +33,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
+            <Link href="/" className="flex items-center mb-4">
+              <div className="bg-white/95 p-2 rounded-xl inline-block">
+                <Image 
+                  src="/logo.png" 
+                  alt="Apex Cloud Consulting Logo" 
+                  width={150} 
+                  height={60} 
+                  className="h-12 w-auto object-contain"
+                />
               </div>
-              <span className="font-bold text-lg text-white">
-                Apex<span className="text-blue-400">Cloud</span> Consulting
-              </span>
             </Link>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
               Your trusted partner for cloud transformation in the automotive industry.
