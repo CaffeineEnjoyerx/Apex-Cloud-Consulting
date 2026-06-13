@@ -1,39 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Apex Cloud Consulting – Online Marketing Projekt
 
-## Getting Started
+**Hochschulprojekt Abgabe**
 
-First, run the development server:
+Willkommen im offiziellen Repository des Projekts "Apex Cloud Consulting". Dieses Repository enthält sowohl die detaillierte strategische Ausarbeitung der Online-Marketing-Konzeption als auch den programmierten Quellcode der zugehörigen Web-Präsenz.
+
+> 🌐 **Live Website ansehen:** [apexcloudconsulting.space](https://apexcloudconsulting.space)
+
+---
+
+## 📄 Strategische Ausarbeitung (Fokus der Abgabe)
+Die folgenden Dokumente beinhalten die vollständige konzeptionelle und strategische Fundierung des Projekts (gemäß der LABs).
+
+1. 🎯 **[Vision, Mission & Ziele (LAB 1)](docs/01_Vision_Mission_Ziele.md)**
+2. 👥 **[Zielgruppen & Positionierung (LAB 1)](docs/02_Zielgruppen_Positionierung.md)**
+3. 🛡️ **[User Persona 1: Stefan (55) – Der On-Premise-Protektor](docs/03_Persona_1_Stefan.md)**
+4. 🚀 **[User Persona 2: Julia (35) – Die lösungsorientierte Macherin](docs/04_Persona_2_Julia.md)**
+5. 🗺️ **[Customer Journey & Marketingkanäle (LAB 2)](docs/05_Customer_Journey_Marketing.md)**
+
+---
+
+## 💻 Technischer Projekt-Teil
+Die programmierte Landingpage und Web-Applikation basiert auf **Next.js 14**, React und Tailwind CSS und ist vollständig für Suchmaschinen (Technical SEO, Schema.org) sowie Performance optimiert.
+
+### Lokale Installation
+Falls Sie das Projekt lokal ausführen möchten, folgen Sie diesen Schritten:
 
 ```bash
+# Abhängigkeiten installieren
+npm install
+
+# Entwicklungsserver starten
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Öffnen Sie anschließend [http://localhost:3000](http://localhost:3000) im Browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Technologie-Stack
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **SEO & Marketing:** Google Analytics 4 (Consent Mode integriert), Dynamische Sitemaps, JSON-LD Schema Markup.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Update
-Test-Push für GitHub.
+---
+*Hinweis: Dies ist ein fiktives Unternehmensprojekt, erstellt im Rahmen einer studentischen Abgabe.*
