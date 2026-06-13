@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "Apex Cloud Consulting delivers cloud transformation, connected car platforms, and DevOps solutions for OEMs and Tier-1 automotive suppliers.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Apex Cloud Consulting – Cloud Solutions for Automotive",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "Apex Cloud Consulting – Cloud Solutions for Automotive",
     description:
       "Cloud transformation, connected car platforms, and DevOps for OEMs and Tier-1 automotive suppliers.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
     creator: "@apexcloudconsult",
   },
 };
