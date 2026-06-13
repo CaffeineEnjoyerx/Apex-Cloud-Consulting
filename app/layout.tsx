@@ -5,11 +5,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import StudentDisclaimer from "@/components/StudentDisclaimer";
+import Analytics from "@/components/Analytics";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://apexcloudconsulting.space";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -205,6 +207,9 @@ export default function RootLayout({
         <main className="pt-16">{children}</main>
         <Footer />
         <CookieBanner />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );

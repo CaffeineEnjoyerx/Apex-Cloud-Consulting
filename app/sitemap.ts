@@ -6,7 +6,7 @@ import { caseStudies } from "@/content/caseStudies";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://apexcloudconsulting.space";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "monthly", priority: 1.0 },

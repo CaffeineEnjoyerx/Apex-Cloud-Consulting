@@ -6,24 +6,24 @@ Apex Cloud Consulting GmbH delivers cloud transformation, connected car platform
 
 ## Services
 
-- [Cloud Migration & Modernization](https://apex-cloud-consulting.vercel.app/services): End-to-end cloud migration for automotive legacy on-premise environments. Covers lift-and-shift, re-platform, and re-architect methodologies for 24/7 production-critical systems with zero-downtime strategies.
-- [DevOps & CI/CD Transformation](https://apex-cloud-consulting.vercel.app/services): Embedding DevOps culture and CI/CD tooling across automotive engineering teams. Includes Infrastructure as Code (Terraform, Pulumi, AWS CDK) and GitOps for OTA update platforms.
-- [Data & Analytics Platforms](https://apex-cloud-consulting.vercel.app/services): Scalable data lake and lakehouse architectures on AWS, Azure, or GCP for vehicle telematics. Real-time streaming architectures and self-service BI for automotive engineers and executives.
-- [Connected Car Platform Engineering](https://apex-cloud-consulting.vercel.app/services): Backend services for connected vehicles — OTA update infrastructure, MQTT/AMQP broker design, remote diagnostics, and GDPR-compliant vehicle data pipelines at scale.
-- [SAP on Cloud](https://apex-cloud-consulting.vercel.app/services): SAP S/4HANA migrations to hyperscaler platforms (AWS, Azure, GCP) with zero business downtime. BTP integration and extension architecture, ECC-to-S/4HANA pathways.
-- [Security & Compliance](https://apex-cloud-consulting.vercel.app/services): TISAX readiness assessments, UNECE WP.29 cybersecurity compliance, zero-trust network architecture, and cloud security posture management (CSPM) for automotive organizations.
+- [Cloud Migration & Modernization](https://apexcloudconsulting.space/services): End-to-end cloud migration for automotive legacy on-premise environments. Covers lift-and-shift, re-platform, and re-architect methodologies for 24/7 production-critical systems with zero-downtime strategies.
+- [DevOps & CI/CD Transformation](https://apexcloudconsulting.space/services): Embedding DevOps culture and CI/CD tooling across automotive engineering teams. Includes Infrastructure as Code (Terraform, Pulumi, AWS CDK) and GitOps for OTA update platforms.
+- [Data & Analytics Platforms](https://apexcloudconsulting.space/services): Scalable data lake and lakehouse architectures on AWS, Azure, or GCP for vehicle telematics. Real-time streaming architectures and self-service BI for automotive engineers and executives.
+- [Connected Car Platform Engineering](https://apexcloudconsulting.space/services): Backend services for connected vehicles — OTA update infrastructure, MQTT/AMQP broker design, remote diagnostics, and GDPR-compliant vehicle data pipelines at scale.
+- [SAP on Cloud](https://apexcloudconsulting.space/services): SAP S/4HANA migrations to hyperscaler platforms (AWS, Azure, GCP) with zero business downtime. BTP integration and extension architecture, ECC-to-S/4HANA pathways.
+- [Security & Compliance](https://apexcloudconsulting.space/services): TISAX readiness assessments, UNECE WP.29 cybersecurity compliance, zero-trust network architecture, and cloud security posture management (CSPM) for automotive organizations.
 
 ## Company
 
-- [About Apex Cloud Consulting](https://apex-cloud-consulting.vercel.app/about): Company story, mission statement, core values, team overview, and technology certifications (AWS, Azure, GCP, Kubernetes, TISAX).
-- [Contact](https://apex-cloud-consulting.vercel.app/contact): Offices in Munich, Germany (HQ) and Detroit, USA. Contact form for cloud strategy and project inquiries.
+- [About Apex Cloud Consulting](https://apexcloudconsulting.space/about): Company story, mission statement, core values, team overview, and technology certifications (AWS, Azure, GCP, Kubernetes, TISAX).
+- [Contact](https://apexcloudconsulting.space/contact): Offices in Munich, Germany (HQ) and Detroit, USA. Contact form for cloud strategy and project inquiries.
 
 ## Legal
 
-- [Impressum](https://apex-cloud-consulting.vercel.app/impressum): German legal notice (Impressumspflicht). This is a fictional student project from Hochschule Heilbronn — not a real commercial entity.
-- [Privacy Policy / Datenschutz](https://apex-cloud-consulting.vercel.app/datenschutz): GDPR/TTDSG-compliant privacy statement covering analytics, cookies, and data processing.
-- [Terms & Conditions / AGB](https://apex-cloud-consulting.vercel.app/agb): General terms and conditions for consulting engagements.
+- [Impressum](https://apexcloudconsulting.space/impressum): German legal notice (Impressumspflicht). This is a fictional student project from Hochschule Heilbronn — not a real commercial entity.
+- [Privacy Policy / Datenschutz](https://apexcloudconsulting.space/datenschutz): GDPR/TTDSG-compliant privacy statement covering analytics, cookies, and data processing.
+- [Terms & Conditions / AGB](https://apexcloudconsulting.space/agb): General terms and conditions for consulting engagements.
 
 ## Optional
 
-- [Sitemap](https://apex-cloud-consulting.vercel.app/sitemap.xml): Full XML sitemap of all pages.
+- [Sitemap](https://apexcloudconsulting.space/sitemap.xml): Full XML sitemap of all pages.

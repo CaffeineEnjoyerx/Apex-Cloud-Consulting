@@ -3,7 +3,7 @@ import Link from "next/link";
 import { heroCopy } from "@/content/hero";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://apexcloudconsulting.space";
 
 const webPageSchema = {
   "@context": "https://schema.org",

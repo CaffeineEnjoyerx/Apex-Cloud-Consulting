@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -15,6 +16,12 @@ const navLinks = [
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname() || "/";
+
+  const isGerman = pathname.startsWith("/de");
+  const togglePath = isGerman
+    ? pathname.replace(/^\/de/, "") || "/"
+    : `/de${pathname === "/" ? "" : pathname}`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
@@ -43,12 +50,21 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Get in Touch
-            </Link>
+            <div className="flex items-center gap-4 border-l border-gray-200 pl-4">
+              <Link
+                href={togglePath}
+                className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+                title={isGerman ? "Switch to English" : "Auf Deutsch wechseln"}
+              >
+                {isGerman ? "EN" : "DE"}
+              </Link>
+              <Link
+                href="/contact"
+                className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                {isGerman ? "Kontakt" : "Get in Touch"}
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile hamburger */}
@@ -83,12 +99,22 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
+          <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between px-3">
+            <span className="text-sm text-gray-500">Language / Sprache</span>
+            <Link
+              href={togglePath}
+              className="px-3 py-1 rounded-md text-sm font-medium text-blue-600 bg-blue-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              {isGerman ? "Switch to English (EN)" : "Auf Deutsch wechseln (DE)"}
+            </Link>
+          </div>
           <Link
             href="/contact"
-            className="block mt-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 text-center"
+            className="block mt-4 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 text-center"
             onClick={() => setMobileOpen(false)}
           >
-            Get in Touch
+            {isGerman ? "Kontakt" : "Get in Touch"}
           </Link>
         </div>
       )}
