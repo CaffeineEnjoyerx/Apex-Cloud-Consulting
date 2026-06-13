@@ -21,6 +21,8 @@ Die folgenden Dokumente beinhalten die vollständige konzeptionelle und strategi
    [Markdown-Version lesen](docs/04_Persona_2_Julia.md) | [Original-PDF ansehen](docs/pdfs/04_Persona_2_Julia.pdf)
 5. 🗺️ **Customer Journey & Marketingkanäle (LAB 2)** 
    [Markdown-Version lesen](docs/05_Customer_Journey_Marketing.md) | [Original-PDF ansehen](docs/pdfs/05_Customer_Journey_Marketing.pdf)
+6. 📊 **Online Marketing & SEO/GEO Implementation Review** 
+   [Ergebnisse & Bugfixes lesen](docs/06_SEO_GEO_Implementation_Review.md)
 
 ---
 
