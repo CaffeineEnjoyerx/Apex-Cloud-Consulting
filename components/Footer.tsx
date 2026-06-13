@@ -38,9 +38,9 @@ export default function Footer() {
                 <Image 
                   src="/logo.jpg" 
                   alt="Apex Cloud Consulting Logo" 
-                  width={150} 
-                  height={60} 
-                  className="h-12 w-auto object-contain"
+                  width={300} 
+                  height={400} 
+                  className="h-24 w-auto object-contain -my-6"
                 />
               </div>
             </Link>
