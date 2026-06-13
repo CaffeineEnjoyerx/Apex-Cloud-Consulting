@@ -11,11 +11,16 @@ Willkommen im offiziellen Repository des Projekts "Apex Cloud Consulting". Diese
 ## 📄 Strategische Ausarbeitung (Fokus der Abgabe)
 Die folgenden Dokumente beinhalten die vollständige konzeptionelle und strategische Fundierung des Projekts (gemäß der LABs).
 
-1. 🎯 **[Vision, Mission & Ziele (LAB 1)](docs/01_Vision_Mission_Ziele.md)**
-2. 👥 **[Zielgruppen & Positionierung (LAB 1)](docs/02_Zielgruppen_Positionierung.md)**
-3. 🛡️ **[User Persona 1: Stefan (55) – Der On-Premise-Protektor](docs/03_Persona_1_Stefan.md)**
-4. 🚀 **[User Persona 2: Julia (35) – Die lösungsorientierte Macherin](docs/04_Persona_2_Julia.md)**
-5. 🗺️ **[Customer Journey & Marketingkanäle (LAB 2)](docs/05_Customer_Journey_Marketing.md)**
+1. 🎯 **Vision, Mission & Ziele (LAB 1)** 
+   [Markdown-Version lesen](docs/01_Vision_Mission_Ziele.md) | [Original-PDF ansehen](docs/pdfs/01_LAB_1_Ziele_Zielgruppen.pdf)
+2. 👥 **Zielgruppen & Positionierung (LAB 1)** 
+   [Markdown-Version lesen](docs/02_Zielgruppen_Positionierung.md) | [Original-PDF ansehen](docs/pdfs/01_LAB_1_Ziele_Zielgruppen.pdf)
+3. 🛡️ **User Persona 1: Stefan (55) – Der On-Premise-Protektor** 
+   [Markdown-Version lesen](docs/03_Persona_1_Stefan.md) | [Original-PDF ansehen](docs/pdfs/03_Persona_1_Stefan.pdf)
+4. 🚀 **User Persona 2: Julia (35) – Die lösungsorientierte Macherin** 
+   [Markdown-Version lesen](docs/04_Persona_2_Julia.md) | [Original-PDF ansehen](docs/pdfs/04_Persona_2_Julia.pdf)
+5. 🗺️ **Customer Journey & Marketingkanäle (LAB 2)** 
+   [Markdown-Version lesen](docs/05_Customer_Journey_Marketing.md) | [Original-PDF ansehen](docs/pdfs/05_Customer_Journey_Marketing.pdf)
 
 ---
 
