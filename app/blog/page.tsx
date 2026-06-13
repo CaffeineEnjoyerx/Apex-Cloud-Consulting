@@ -122,7 +122,7 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Expert Guidance for Your Cloud Journey</h2>
           <p className="text-blue-100 text-lg mb-8">
-            These articles reflect what we see on real engagements. If you're facing a specific challenge, talk to us directly.
+            These articles reflect what we see on real engagements. If you&apos;re facing a specific challenge, talk to us directly.
           </p>
           <Link
             href="/contact"

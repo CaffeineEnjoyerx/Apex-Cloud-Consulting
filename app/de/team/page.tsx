@@ -3,9 +3,6 @@ import Link from "next/link";
 import { teamMembers } from "@/content/team";
 import { teamPageCopyDe, teamMemberBiosDe } from "@/content/de/team";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://apex-cloud-consulting.vercel.app";
-
 export const metadata: Metadata = {
   title: "Unser Team",
   description:
