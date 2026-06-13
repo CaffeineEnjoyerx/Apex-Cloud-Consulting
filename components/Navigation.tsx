@@ -33,9 +33,9 @@ export default function Navigation() {
             <Image 
               src="/logo.png" 
               alt="Apex Cloud Consulting Logo" 
-              width={160} 
-              height={64} 
-              className="h-12 w-auto object-contain"
+              width={200} 
+              height={80} 
+              className="h-20 w-auto object-contain -my-2"
               priority
             />
           </Link>
